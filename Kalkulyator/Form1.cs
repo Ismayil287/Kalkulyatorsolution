@@ -240,7 +240,11 @@ namespace Kalkulyator
 
         private void buttonequal_Click(object sender, EventArgs e)
         {
-            compute(count);
+            if (textBox1.Text.Length > 0) 
+            {
+                compute(count);
+            }
+                
         }
 
         public void compute(int count)
@@ -265,34 +269,46 @@ namespace Kalkulyator
 
         private void buttonplus_Click(object sender, EventArgs e)
         {
-            firstdigit1 = float.Parse(textBox1.Text);
-            textBox1.Clear();
-            textBox1.Focus();
-            count = 1;
+            if (textBox1.Text.Length > 0)
+            {
+                firstdigit1 = float.Parse(textBox1.Text);
+                textBox1.Clear();
+                textBox1.Focus();
+                count = 1;
+            }
         }
 
         private void buttonminus_Click(object sender, EventArgs e)
         {
-            firstdigit1 = float.Parse(textBox1.Text);
-            textBox1.Clear();
-            textBox1.Focus();
-            count = 2;
+            if (textBox1.Text.Length > 0)
+            {
+                firstdigit1 = float.Parse(textBox1.Text);
+                textBox1.Clear();
+                textBox1.Focus();
+                count = 2;
+            }
         }
 
         private void buttonmultiply_Click(object sender, EventArgs e)
         {
+            if(textBox1.Text.Length > 0)
+            {
             firstdigit1 = float.Parse(textBox1.Text);
             textBox1.Clear();
             textBox1.Focus();
             count = 4;
+            }
         }
 
         private void buttondivision_Click(object sender, EventArgs e)
         {
-            firstdigit1 = float.Parse(textBox1.Text);
-            textBox1.Clear();
-            textBox1.Focus();
-            count = 3;
+            if (textBox1.Text.Length > 0)
+            {
+                firstdigit1 = float.Parse(textBox1.Text);
+                textBox1.Clear();
+                textBox1.Focus();
+                count = 3;
+            }
         }
     }
 }
